@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -10,103 +9,22 @@
 </head>
 <body>
   <aside class="sidebar">
-    <a href="#" class="brand"><span class="brand-icon">F</span> FinanSys</a>
-
+    <a href="index.html" class="brand"><span class="brand-icon">F</span> FinanSys</a>
     <p class="menu-label">MENU PRINCIPAL</p>
-    <nav>
-      <a href="#" class="nav-link active">▦ <span>Dashboard</span></a>
-      <a href="#" class="nav-link">⇄ <span>Transações</span></a>
-      <a href="#" class="nav-link">▥ <span>Relatórios</span></a>
-      <a href="#" class="nav-link">◎ <span>Metas financeiras</span></a>
-      <a href="#" class="nav-link">▤ <span>Orçamentos</span></a>
-      <a href="#" class="nav-link">▣ <span>Cartões</span></a>
+    <nav aria-label="Menu principal">
+      <a href="index.html" class="nav-link" data-page="dashboard">▦ <span>Dashboard</span></a>
+      <a href="transacoes.html" class="nav-link" data-page="transacoes">⇄ <span>Transações</span></a>
+      <a href="relatorios.html" class="nav-link" data-page="relatorios">▥ <span>Relatórios</span></a>
+      <a href="metas.html" class="nav-link" data-page="metas">◎ <span>Metas financeiras</span></a>
+      <a href="orcamentos.html" class="nav-link" data-page="orcamentos">▤ <span>Orçamentos</span></a>
+      <a href="cartoes.html" class="nav-link" data-page="cartoes">▣ <span>Cartões</span></a>
     </nav>
-
-    <div class="sidebar-footer">
-      <span class="avatar">N</span>
-      <div><strong>Meu perfil</strong><small>Minha conta</small></div>
-    </div>
+    <a class="sidebar-footer profile-link" href="perfil.html" data-page="perfil">
+      <span class="avatar" id="profile-avatar">N</span>
+      <div><strong id="profile-name-menu">Meu perfil</strong><small>Personalizar perfil</small></div>
+    </a>
   </aside>
-
-  <main class="main-content">
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">VISÃO GERAL</p>
-        <h1>Dashboard</h1>
-        <p class="subtitle">Acompanhe sua vida financeira.</p>
-      </div>
-      <div class="user-avatar">N</div>
-    </header>
-
-    <section class="welcome">
-      <div>
-        <p class="eyebrow">SEU DINHEIRO, SOB CONTROLE</p>
-        <h2>Bem-vindo ao FinanSys.</h2>
-        <p>Organize suas finanças e acompanhe seu progresso.</p>
-      </div>
-      <span class="welcome-symbol">↗</span>
-    </section>
-
-    <section class="summary-grid">
-      <article class="summary-card balance-card">
-        <p>Saldo total</p>
-        <h2 id="balance">R$ 0,00</h2>
-        <span class="card-note">Saldo demonstrativo</span>
-      </article>
-
-      <article class="summary-card">
-        <p>Receitas do mês</p>
-        <h2 id="income">R$ 0,00</h2>
-        <span class="card-note positive">↑ Entradas</span>
-      </article>
-
-      <article class="summary-card">
-        <p>Despesas do mês</p>
-        <h2 id="expenses">R$ 0,00</h2>
-        <span class="card-note negative">↓ Saídas</span>
-      </article>
-    </section>
-
-    <section class="content-grid">
-      <article class="panel">
-        <div class="panel-heading">
-          <div><h3>Visão financeira</h3><p>Resumo das movimentações</p></div>
-          <span class="tag">Este mês</span>
-        </div>
-        <div class="chart-placeholder">
-          <div class="chart-icon">⌁</div>
-          <p>Seu gráfico financeiro aparecerá aqui.</p>
-          <small>Adicionaremos gráficos interativos em uma próxima etapa.</small>
-        </div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-heading">
-          <div><h3>Distribuição do saldo</h3><p>Seu planejamento</p></div>
-        </div>
-        <div class="empty-state">
-          <div class="empty-icon">◎</div>
-          <p>Nenhuma movimentação ainda</p>
-          <small>Suas informações aparecerão quando cadastrarmos transações.</small>
-        </div>
-      </article>
-    </section>
-
-    <section class="panel transactions-panel">
-      <div class="panel-heading">
-        <div><h3>Últimas transações</h3><p>Movimentações recentes da sua conta</p></div>
-        <span class="tag">0 registros</span>
-      </div>
-      <div class="empty-state">
-        <div class="empty-icon">↔</div>
-        <p>Seu histórico está vazio</p>
-        <small>Em breve você poderá cadastrar receitas e despesas.</small>
-      </div>
-    </section>
-
-    <footer>FinanSys © 2026 · Controle financeiro pessoal</footer>
-  </main>
-
+  <main class="main-content" id="app"></main>
   <script src="script.js"></script>
 </body>
 </html>
